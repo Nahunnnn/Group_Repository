@@ -1,4 +1,4 @@
-# edo.py
+# Edo_Nahum.py
 
 edo_dict = {
         "food": "Ẹghẹn",
@@ -25,6 +25,7 @@ edo_dict = {
 
 def translate(word):
     return edo_dict.get(word.lower(), "Word not found in Edo dictionary")
+
 
 
        
