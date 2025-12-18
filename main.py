@@ -2,7 +2,7 @@ import Igbo_Aaron
 import Hausa_Nanret
 import Yoruba_Ifee
 import Edo_Nahum
-import Tiv_Kelvin
+import tiv_dicctionary
 
 
 print("--- NIGERIAN LANGUAGE TRANSLATOR ---")
@@ -29,6 +29,7 @@ elif choice == "5":
     print("Tiv Translation:", Tiv_Kelvin.translate(word))
 else:
     print("Invalid choice")
+
 
 
 
