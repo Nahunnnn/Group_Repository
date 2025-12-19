@@ -1,40 +1,31 @@
-#Ife_Yoruba.py
-
 yoruba_dict = {
-    "How": "Bawo",
-    "Good Morning": "Ekaaro",
-    "Please": "Ejo",
-    "Wait": "Duro",
-    "Thanks": "Ope",
-    "House": "Ile",
-    "Water": "Omi",
-    "Food": "Onje",
-    "Father": "Baba",
-    "Mother": "Iya",
-    "Child": "Omode",
-    "Soap": "Aro",
-    "Market": "Oja",
-    "Road": "Ona",
-    "Character": "Iwa",
-    "Forgiveness": "Efun",
-    "Joy": "Ayo",
-    "Twins": "Ibeji",
-    "Oracle": "Ifa",
-    "Chapter": "Odu",
+    "how": "Bawo",
+    "good morning": "Ekaaro",
+    "please": "Ejo",
+    "wait": "Duro",
+    "thanks": "Ope",
+    "house": "Ile",
+    "water": "Omi",
+    "food": "Onje",
+    "father": "Baba",
+    "mother": "Iya",
+    "child": "Omode",
+    "soap": "Aro",
+    "market": "Oja",
+    "road": "Ona",
+    "character": "Iwa",
+    "forgiveness": "Efun",
+    "joy": "Ayo",
+    "twins": "Ibeji",
+    "oracle": "Ifa",
+    "chapter": "Odu"
 }
 
-print("Welcome to Yoruba Dictionary, What word would you like to translate to Yoruba? ")
-print("type 'exit' to quit")
+word = input("Welcome to Yoruba Dictionary! Please enter a word: ")
 
-while True:
-    word=input("Enter an English word").lower()
-    if word == "exit":
-        print("goodbye")
-        break
+word = word.strip().lower()  
 
-    if word in yoruba_dict:
-        print("Yoruba translator:",
-              yoruba_dict[word])
-    else:
-        print("sorry,word not in dictionary")
-
+if word in yoruba_dict:
+    print(f"The meaning in Yoruba is: {yoruba_dict[word]}")
+else:
+    print("Word not found in Yoruba Dictionary")
