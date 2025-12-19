@@ -34,6 +34,7 @@ while True:
 
     if word in yoruba_dict:
         print("Yoruba translator:",
-              yoruba_dictionary[word])
+              yoruba_dict[word])
     else:
         print("sorry,word not in dictionary")
+
