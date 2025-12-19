@@ -23,6 +23,17 @@ yoruba_dict = {
     "Chapter": "Odu",
 }
 
-def translate(word):
+print("Welcome to Yoruba Dictionary, What word would you like to translate to Yoruba? ")
+print("type 'exit' to quit")
 
-    return yoruba_dict.get(word.lower(), "Word not found in Yoruba Dictionary")
+while True:
+    word=input("Enter an English word").lower()
+    if word == "exit":
+        print("goodbye")
+        break
+
+    if word in yoruba_dict:
+        print("Yoruba translator:",
+              yoruba_dictionary[word])
+    else:
+        print("sorry,word not in dictionary")
