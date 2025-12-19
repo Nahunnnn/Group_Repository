@@ -1,3 +1,5 @@
+#Ife_Yoruba
+
 yoruba_dict = {
     "how": "Bawo",
     "good morning": "Ekaaro",
@@ -29,3 +31,4 @@ if word in yoruba_dict:
     print(f"The meaning in Yoruba is: {yoruba_dict[word]}")
 else:
     print("Word not found in Yoruba Dictionary")
+
