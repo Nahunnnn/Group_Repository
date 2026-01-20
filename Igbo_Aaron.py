@@ -1,6 +1,9 @@
-# Aaron_Igbo.py
+import streamlit as st
 
-igbo_dict = {
+
+st.title("igbo Dictionary")
+
+languages = {
     "food": "Nri",
     "water": "Mmiri",
     "house": "Ụlọ",
@@ -23,10 +26,14 @@ igbo_dict = {
     "soup": "Ofe",
 }
 
-def translate(word):
-    return igbo_dict.get(word.lower(), "Word not found in Igbo dictionary")
-while True:
-    word = input("Enter an English word (or type 'exit' to quit): ").strip()
-    if word.lower() == "exit":
-        break
-    print(translate(word))
+user_word = st.text_input("Enter a word you would like to translate").strip().lower()
+if  st.button("Translate"):
+    if user_word:
+        #check if the word exists in the dictionary
+        if user_word in languages:
+            translation = languages[user_word]
+            st.success(f"**translation:** {translation}")
+        else:
+            st.warning("sorry,word not in dictionary")
+    else:
+        st.warning("Please enter a word first")
