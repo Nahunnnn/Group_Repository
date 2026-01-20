@@ -1,6 +1,11 @@
-#Ife_Yoruba
+import streamlit as st
 
-yoruba_dict = {
+
+st.title("yoruba Dictionary")
+
+languages = {
+
+
     "how": "Bawo",
     "good morning": "Ekaaro",
     "please": "Ejo",
@@ -23,12 +28,20 @@ yoruba_dict = {
     "chapter": "Odu"
 }
 
-word = input("Welcome to Yoruba Dictionary! Please enter a word: ")
+user_word = st.text_input("Enter a word you would like to translate").strip().lower()
+if  st.button("Translate"):
+    if user_word:
+        #check if the word exists in the dictionary
+        if user_word in languages:
+            translation = languages[user_word]
+            st.success(f"**translation:** {translation}")
+        else:
+            st.warning("sorry,word not in dictionary")
+    else:
+        st.warning("Please enter a word first")
 
-word = word.strip().lower()  
 
-if word in yoruba_dict:
-    print(f"The meaning in Yoruba is: {yoruba_dict[word]}")
-else:
-    print("Word not found in Yoruba Dictionary")
+
+
+
 
