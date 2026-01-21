@@ -1,27 +1,39 @@
-# Hausa_Nanret.py
+import streamlit as st
 
-hausa_dict = {
-    "food": "abinci",
-    "water": "ruwa",
-    "house": "gida",
-    "person": "mutum",
-    "child": "yaro",
-    "mother": "uwa",
-    "father": "uba",
-    "king": "sarki",
-    "work": "aiki",
-    "hand": "hannu",
-    "ear": "kunne",
-    "eye": "ido",
-    "sun": "rana",
-    "world": "duniya",
-    "time": "lokaci",
-    "year": "shekara",
-    "happiness": "farin ciki",
-    "fire": "wuta",
-    "stone": "dutse",
-    "soup": "miya"
+
+st.title("hausa Dictionary")
+
+languages = {
+"food": "abinci",
+"water": "ruwa",
+"house": "gida",
+"person": "mutum",
+"child": "yaro",
+"mother": "uwa",
+"father": "uba",
+"king": "sarki",
+"work": "aiki",
+"hand": "hannu",
+"ear": "kunne",
+"eye": "ido",
+"sun": "rana",
+"world": "duniya",
+"time": "lokaci",
+"year": "shekara",
+"happiness": "farin ciki",
+"fire": "wuta",
+"stone": "dutse",
+"soup": "miya"
 }
 
-def translate(word):
-    return hausa_dict.get(word.lower(), "Word not found in Hausa dictionary")
+user_word = st.text_input("Enter a word you would like to translate").strip().lower()
+if st.button("Translate"):
+if user_word:
+#check if the word exists in the dictionary
+if user_word in languages:
+translation = languages[user_word]
+st.success(f"**translation:** {translation}")
+else:
+st.warning("sorry,word not in dictionary")
+else:
+st.warning("Please enter a word first")
