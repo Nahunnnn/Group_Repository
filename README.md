@@ -1,3 +1,5 @@
+<img width="1366" height="768" alt="2" src="https://github.com/user-attachments/assets/89a14cf2-4e63-4679-90d5-c6ec478d1ac4" />
+<img width="1366" height="768" alt="1" src="https://github.com/user-attachments/assets/fea11fed-f054-46ff-8219-3abf0644ca0d" />
 <img width="1366" height="768" alt="Screenshot (4)" src="https://github.com/user-attachments/assets/bdd84900-eed3-4895-9107-a9689f7450fe" />
 # Group_Repository
 COS 101 Group Project (Nigerian Language Translator) Dictionaries.
